@@ -1,0 +1,171 @@
+{
+  "title": "Practice Software Testing - Toolshop - v5.0",
+  "url": "https://practicesoftwaretesting.com/",
+  "probe": {
+    "search_query": true,
+    "search_submit": true,
+    "search_reset": true,
+    "search_caption": null,
+    "sortExists": true,
+    "sortOptions": [
+      {
+        "value": "",
+        "text": ""
+      },
+      {
+        "value": "name,asc",
+        "text": "Name (A - Z)"
+      },
+      {
+        "value": "name,desc",
+        "text": "Name (Z - A)"
+      },
+      {
+        "value": "price,desc",
+        "text": "Price (High - Low)"
+      },
+      {
+        "value": "price,asc",
+        "text": "Price (Low - High)"
+      },
+      {
+        "value": "co2_rating,asc",
+        "text": "CO₂ Rating (A - E)"
+      },
+      {
+        "value": "co2_rating,desc",
+        "text": "CO₂ Rating (E - A)"
+      }
+    ],
+    "productCount": 27,
+    "cardInfo": {
+      "dataTest": "product-01KWD1WG72RCGWEC1V8TH193YN",
+      "tag": "A",
+      "hasProductName": true,
+      "hasProductPrice": true,
+      "nameText": "Combination Pliers",
+      "priceText": "$14.15",
+      "outer": "<a _ngcontent-ng-c670033506=\"\" class=\"card\" style=\"text-decoration: none; color: black;\" data-test=\"product-01KWD1WG72RCGWEC1V8TH193YN\" href=\"/product/01KWD1WG72RCGWEC1V8TH193YN\"><div _ngcontent-ng-c670033506=\"\" class=\"card-img-wrapper position-relative\"><img _ngcontent-ng-c670033506=\"\" loading=\"lazy\" class=\"card-img-top\" alt=\"Combination Pliers\" src=\"assets/img/products/pliers01.avif\"><!----><but"
+    },
+    "checkboxCount": 22,
+    "checkboxes": [
+      {
+        "dataTest": "category-01KWD1WG57KXYN83TM1FQV2WQB",
+        "id": "",
+        "label": "Hand Tools"
+      },
+      {
+        "dataTest": "category-01KWD1WG5HYTY43YT7WQA7FSBP",
+        "id": "",
+        "label": "Hammer"
+      },
+      {
+        "dataTest": "category-01KWD1WG5HYTY43YT7WQA7FSBQ",
+        "id": "",
+        "label": "Hand Saw"
+      },
+      {
+        "dataTest": "category-01KWD1WG5HYTY43YT7WQA7FSBR",
+        "id": "",
+        "label": "Wrench"
+      },
+      {
+        "dataTest": "category-01KWD1WG5JH2MT6FWGBXVD0NWE",
+        "id": "",
+        "label": "Screwdriver"
+      },
+      {
+        "dataTest": "category-01KWD1WG5JH2MT6FWGBXVD0NWF",
+        "id": "",
+        "label": "Pliers"
+      },
+      {
+        "dataTest": "category-01KWD1WG5JH2MT6FWGBXVD0NWG",
+        "id": "",
+        "label": "Chisels"
+      },
+      {
+        "dataTest": "category-01KWD1WG5JH2MT6FWGBXVD0NWH",
+        "id": "",
+        "label": "Measures"
+      },
+      {
+        "dataTest": "category-01KWD1WG57KXYN83TM1FQV2WQC",
+        "id": "",
+        "label": "Power Tools"
+      },
+      {
+        "dataTest": "category-01KWD1WG5JH2MT6FWGBXVD0NWJ",
+        "id": "",
+        "label": "Grinder"
+      },
+      {
+        "dataTest": "category-01KWD1WG5JH2MT6FWGBXVD0NWK",
+        "id": "",
+        "label": "Sander"
+      },
+      {
+        "dataTest": "category-01KWD1WG5JH2MT6FWGBXVD0NWM",
+        "id": "",
+        "label": "Saw"
+      },
+      {
+        "dataTest": "category-01KWD1WG5JH2MT6FWGBXVD0NWN",
+        "id": "",
+        "label": "Drill"
+      },
+      {
+        "dataTest": "category-01KWD1WG57KXYN83TM1FQV2WQD",
+        "id": "",
+        "label": "Other"
+      },
+      {
+        "dataTest": "category-01KWD1WG5JH2MT6FWGBXVD0NWP",
+        "id": "",
+        "label": "Tool Belts"
+      },
+      {
+        "dataTest": "category-01KWD1WG5JH2MT6FWGBXVD0NWQ",
+        "id": "",
+        "label": "Storage Solutions"
+      },
+      {
+        "dataTest": "category-01KWD1WG5JH2MT6FWGBXVD0NWR",
+        "id": "",
+        "label": "Workbench"
+      },
+      {
+        "dataTest": "category-01KWD1WG5JH2MT6FWGBXVD0NWS",
+        "id": "",
+        "label": "Safety Gear"
+      },
+      {
+        "dataTest": "category-01KWD1WG5JH2MT6FWGBXVD0NWT",
+        "id": "",
+        "label": "Fasteners"
+      },
+      {
+        "dataTest": "brand-01KWD1WFTKXEJS1K5TRKNZ7FFZ",
+        "id": "",
+        "label": "ForgeFlex Tools"
+      },
+      {
+        "dataTest": "brand-01KWD1WFTKXEJS1K5TRKNZ7FG0",
+        "id": "",
+        "label": "MightyCraft Hardware"
+      },
+      {
+        "dataTest": "eco-friendly-filter",
+        "id": "",
+        "label": "Show only eco-friendly products"
+      }
+    ],
+    "filtersHeading": "Filters"
+  },
+  "emptyState": {
+    "hasNoResultsDataTest": true,
+    "noResultsText": "There are no products found.",
+    "bodyHasNoProducts": true,
+    "productCountAfter": 0
+  }
+}

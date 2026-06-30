@@ -1,0 +1,115 @@
+{
+  "nev": "Király Éva",
+  "azonosito": "kiraeva73-cmyk",
+  "hazi_szam": 1,
+  "tartalom": {
+    "user_story": "Vevőként szeretném a termékeket név szerint keresni, kategória és márka szerint szűrni, valamint ár szerint rendezni, hogy gyorsan megtaláljam a számomra releváns szerszámot.",
+    "tesztesetek": [
+      {
+        "id": "TC01",
+        "tipus": "happy_path",
+        "nev": "Keresés termék névre",
+        "elofeltetel": "A felhasználó a kezdőoldalon van (https://practicesoftwaretesting.com), a teljes terméklista betöltött (45 termék, 5 oldal, oldalanként 9), nincs aktív szűrő.",
+        "lepesek": [
+          "1. Nyisd meg a kezdőoldalt: https://practicesoftwaretesting.com",
+          "2. Kattints a felső keresőmezőbe.",
+          "3. Írd be a következő szót: Pliers",
+          "4. Nyomd meg a Search gombot (vagy az Enter billentyűt)."
+        ],
+        "elvart_eredmeny": "A találati lista csak azokra a termékekre szűkül, amelyek nevében szerepel a „Pliers” szó (pl. Combination Pliers, Long Nose Pliers, Slip Joint Pliers, Pliers). Olyan termék, amelynek nevében nincs benne a keresett szöveg, nem jelenik meg."
+      },
+      {
+        "id": "TC02",
+        "tipus": "happy_path",
+        "nev": "Szűrés kategóriára",
+        "elofeltetel": "Kezdőoldal betöltve, a bal oldali szűrőpanel látható, nincs bejelölt kategória vagy márka.",
+        "lepesek": [
+          "1. Nyisd meg a kezdőoldalt.",
+          "2. A bal oldali „By category” szűrőben keresd meg a Hammer kategóriát.",
+          "3. Jelöld be a Hammer jelölőnégyzetet.",
+          "4. Várd meg, amíg a találati lista frissül."
+        ],
+        "elvart_eredmeny": "A találati lista csak a Hammer kategóriába tartozó termékeket mutatja (pl. Claw Hammer, Thor Hammer, Hammer, Sledgehammer, Court Hammer). Más kategóriához tartozó termék nem jelenik meg, és a találatok száma kevesebb, mint a teljes 45."
+      },
+      {
+        "id": "TC03",
+        "tipus": "happy_path",
+        "nev": "Ár szerinti rendezés növekvő sorrendben",
+        "elofeltetel": "Kezdőoldal betöltve, teljes terméklista, nincs aktív szűrő.",
+        "lepesek": [
+          "1. Nyisd meg a kezdőoldalt.",
+          "2. Nyisd le a „Sort” legördülő menüt.",
+          "3. Válaszd a „Price (Low - High)” opciót.",
+          "4. Nézd végig a megjelenített termékek árait fentről lefelé."
+        ],
+        "elvart_eredmeny": "A termékek növekvő ár szerint rendeződnek: a legolcsóbb termék áll elöl, és az egymást követő termékek ára nem csökken. A lista elején a legalacsonyabb árú termékek szerepelnek (a legolcsóbb kb. $3.55, $3.95 körül)."
+      },
+      {
+        "id": "TC04",
+        "tipus": "happy_path",
+        "nev": "Ár szerinti rendezés csökkenő sorrendben",
+        "elofeltetel": "Kezdőoldal betöltve, teljes terméklista, nincs aktív szűrő.",
+        "lepesek": [
+          "1. Nyisd meg a kezdőoldalt.",
+          "2. Nyisd le a „Sort” legördülő menüt.",
+          "3. Válaszd a „Price (High - Low)” opciót.",
+          "4. Nézd végig a termékek árait fentről lefelé, majd lapozz a következő oldalra."
+        ],
+        "elvart_eredmeny": "A termékek csökkenő ár szerint rendeződnek: a legdrágább termék áll elöl, és az egymást követő termékek ára nem növekszik. A rendezés a lapozás után is folytatódik (a 2. oldal árai nem nagyobbak az 1. oldal utolsó termékének áránál)."
+      },
+      {
+        "id": "TC05",
+        "tipus": "edge_case",
+        "nev": "Kategória és márka szűrő együttes (AND) alkalmazása",
+        "elofeltetel": "Kezdőoldal betöltve, nincs aktív szűrő. Ismert, hogy több szűrő együtt AND-kapcsolattal szűkít.",
+        "lepesek": [
+          "1. Nyisd meg a kezdőoldalt.",
+          "2. A „By category” szűrőben jelöld be a Pliers kategóriát, és jegyezd fel a találatok számát.",
+          "3. A „By brand” szűrőben jelöld be a ForgeFlex Tools jelölőnégyzetet.",
+          "4. Várd meg a találati lista frissülését."
+        ],
+        "elvart_eredmeny": "A találati lista csak azokat a termékeket mutatja, amelyek egyszerre a Pliers kategóriába tartoznak ÉS a ForgeFlex Tools márkához. A két szűrő együtt szűkebb (kevesebb vagy egyenlő számú) eredményt ad, mint a kategória önmagában; egyik feltételnek sem megfelelő termék nem jelenik meg."
+      },
+      {
+        "id": "TC06",
+        "tipus": "edge_case",
+        "nev": "Szűrők törlése és a lista visszaállítása",
+        "elofeltetel": "Kezdőoldal betöltve. A felhasználó már beállított legalább egy szűrőt, ezért a lista szűkített.",
+        "lepesek": [
+          "1. Nyisd meg a kezdőoldalt.",
+          "2. A „By category” szűrőben jelöld be a Drill kategóriát – a lista leszűkül néhány termékre.",
+          "3. Vedd ki a pipát a Drill jelölőnégyzetből (illetve ha volt beírt keresés, töröld a keresőmező tartalmát).",
+          "4. Várd meg a találati lista frissülését."
+        ],
+        "elvart_eredmeny": "A szűrő eltávolítása után a találati lista visszaáll a teljes terméklistára (mind a 45 termék, 5 oldalon). A szűrés tehát visszavonható, és a kiindulási állapot helyreáll."
+      },
+      {
+        "id": "TC07",
+        "tipus": "boundary",
+        "nev": "Keresés kis-/nagybetűvel és felesleges szóközökkel",
+        "elofeltetel": "Kezdőoldal betöltve, teljes terméklista.",
+        "lepesek": [
+          "1. Nyisd meg a kezdőoldalt.",
+          "2. Írd be a keresőbe csupa kisbetűvel: pliers, majd indítsd a keresést, és jegyezd fel a találatokat.",
+          "3. Töröld a keresőmezőt, és írd be csupa nagybetűvel: PLIERS, majd indítsd a keresést.",
+          "4. Töröld a keresőmezőt, és írd be vezető és záró szóközökkel: '  Pliers  ', majd indítsd a keresést."
+        ],
+        "elvart_eredmeny": "Mindhárom keresés ugyanazt a találati listát adja vissza (a „Pliers” szót tartalmazó termékeket): a keresés kis- és nagybetűre érzéketlen, és a vezető/záró szóközöket figyelmen kívül hagyja (trimmeli). Az alkalmazás egyik esetben sem dob hibát."
+      },
+      {
+        "id": "TC08",
+        "tipus": "negative",
+        "nev": "Keresés nem létező terméknévre (nincs találat)",
+        "elofeltetel": "Kezdőoldal betöltve, teljes terméklista.",
+        "lepesek": [
+          "1. Nyisd meg a kezdőoldalt.",
+          "2. Kattints a keresőmezőbe.",
+          "3. Írj be egy biztosan nem létező terméknevet: qwertyxyz123",
+          "4. Nyomd meg a Search gombot (vagy az Enter billentyűt)."
+        ],
+        "elvart_eredmeny": "A találati lista üres, és a felület megjeleníti a „There are no products found.” üres állapot üzenetet. Egyetlen termékkártya sem jelenik meg, és az alkalmazás nem dob hibát, nem omlik össze."
+      }
+    ],
+    "dokumentacio": "Tesztelési scope: a practicesoftwaretesting.com (Toolshop) terméklista keresés (név), kategória/márka szűrés (és AND-kombináció) és ár szerinti rendezés funkciói a user story és az acceptance criteria alapján; a kosár, fizetés és bejelentkezés nem része. Megközelítés: fekete dobozos, AC-alapú funkcionális tesztelés a valós alkalmazáson, happy path mellett edge, boundary és negatív esetekkel (szűrők AND-je, törlése, kis-/nagybetű és szóköz, üres találat); a 8 esetet Playwrighttal, valódi Chrome böngészőben automatizáltan is lefuttattuk. Összefoglaló: mind a 8 teszteset sikeres (8/8) – a keresés a névben egyezőkre szűkít, a kombinált szűrők szigorúbban szűrnek, a rendezés helyes növekvő/csökkenő sorrendet ad, és a felület megjeleníti a nincs találat állapotot."
+  }
+}

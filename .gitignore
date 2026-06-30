@@ -1,0 +1,19 @@
+# Függőségek – soha ne kerüljön a repóba (regenerálható: npm install)
+node_modules/
+
+# Playwright generált kimenetek (regenerálható: npx playwright test / show-report)
+playwright-report/
+test-results/
+blob-report/
+playwright/.cache/
+.last-run.json
+
+# Naplók
+*.log
+npm-debug.log*
+
+# OS / szerkesztő által generált fájlok
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
